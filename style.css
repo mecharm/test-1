@@ -1,17 +1,154 @@
-body {
-    color: steelblue;
-    background-color: azure;
+html {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    color: red;
+nav ul {
+    position: relative;
+    top: -10px;
+    float: right;
+    margin-right: 70px;
 }
 
-
-h1 {
-    color: purple;
+nav li {
+    display: inline;
+    margin: 0 5px 0 5px;
+    font-size: 13px;
 }
 
-p {
-    color: greenyellow;
+#google-apps-image {
+    width: 16%;
+    position: relative;
+    left: 8px;
+    top: 7px;
+    z-index: 1;
+}
+
+#main-content {
+    height: 100%;
+}
+
+#main-image {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 20%;
+    top: 20%;
+    clear: both; /* to not interfere with the nav bar */
+}
+
+#search-bar-image {
+    width: 5%;
+    display: block;
+    position: relative;
+    top: 19.5%;
+    left: 63.5%;
+    z-index: 1;
+}
+
+#search-bar { /* margin-auto works because they are block level */
+    position: relative;
+    display: block;
+    margin: auto;
+    padding-left: 15px; /* padding is for the INSIDE of the field, where the user will start typing */
+    padding-right: 95px; /* when to cut off the scrolling text inside the input field */
+    width: 40%;
+    height: 40px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    top: 25%;
+    clear: both; /* to not interfere with the nav bar */
+    
+}
+
+#search-bar:hover, #search-bar:focus {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+#search-buttons { /* text-align on the buttons' parent element to center them horizontally */
+    position: relative;
+    text-align: center;
+    top: 24%;
+}
+
+#search-button, #luck-button {
+    width: 120px;
+    color: rgb(95, 99, 104);
+    background-color: rgb(242, 242, 242);
+    border: solid;
+    border-color: transparent; /* so adding the visible border on hover doesn't push the element down */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#search-button:hover, #luck-button:hover {
+    background: linear-gradient(to bottom, #f8f8f8, #f1f1f1);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    cursor: pointer;
+}
+
+#main-content input + input {
+    margin: 0 15px 0 15px;
+}
+
+#footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 85px;
+    background-color: rgb(242, 242, 242);
+    color: rgb(95, 99, 104);
+    font-size: 13px;
+}
+
+#bottom-divider {
+    position: relative;
+    width:100%;
+    height: 40px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+#country-bottom {  
+    position: absolute;
+    left: 15px;
+    bottom: 9px;
+    padding: 0;
+    margin: 0 0 0 15px;
+    font-size: 15px;
+}
+
+#bottom-1 {
+    position: absolute;
+    left: 0;
+    bottom: 1;
+    padding: 0;
+    margin-left: 20px;
+}
+
+#bottom-1 li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+#bottom-2 {
+    position: absolute;
+    right: 0;
+    bottom: 1;
+    padding: 0;
+    margin-right: 20px;
+}
+
+#bottom-2 li {
+    display: inline;
+    margin: 0 10px 0 10px;
 }
