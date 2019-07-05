@@ -1,79 +1,95 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
-nav ul {
-    position: relative;
-    top: -10px;
-    float: right;
-    margin-right: 70px;
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  float: right; /* this and the nav li floats are there to reverse the switch of the items order */
 }
 
 nav li {
     display: inline;
-    margin: 0 5px 0 5px;
     font-size: 13px;
+    float: left; /* this and the nav floats are there to reverse the switch of the items order */
 }
 
-#google-apps-image {
-    width: 16%;
+nav li+li {
+  margin-left: 20px;
+}
+
+nav ul li:nth-child(2) {
+  margin-right: 100px; /* to push them away from the side of the screen */
+}
+
+#nav-img { /* parent = ul */
+    width: 30px;
     position: relative;
-    left: 8px;
-    top: 7px;
-    z-index: 1;
+    top: -8px;
+    left: -90px;
 }
 
 #main-content {
-    height: 100%;
+    height: 100vh;
+  width: 100vw;
+    position: relative;
 }
 
 #main-image {
-    position: relative;
+    position: absolute;
     display: block;
-    margin: auto;
-    width: 20%;
-    top: 20%;
-    clear: both; /* to not interfere with the nav bar */
+    width: 272px;
+  /* to center the element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%);
 }
 
-#search-bar-image {
-    width: 5%;
+#search-bar {
+    position: absolute;
     display: block;
-    position: relative;
-    top: 19.5%;
-    left: 63.5%;
-    z-index: 1;
-}
-
-#search-bar { /* margin-auto works because they are block level */
-    position: relative;
-    display: block;
-    margin: auto;
     padding-left: 15px; /* padding is for the INSIDE of the field, where the user will start typing */
-    padding-right: 95px; /* when to cut off the scrolling text inside the input field */
-    width: 40%;
+    padding-right: 50px; /* when to cut off the scrolling text inside the input field */
+    width: 400px;
     height: 40px;
     border-style: solid;
     border-radius: 20px;
     border-color: rgba(0, 0, 0, 0.1);
     border-width: 1px;
-    top: 25%;
-    clear: both; /* to not interfere with the nav bar */
-    
+    /* to center the element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);   
+}
+
+#search-bar-img { /* parent = div #main-content */
+    padding: 10px; /* to give dimensions to the empty span */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(995%, -825%);
 }
 
 #search-bar:hover, #search-bar:focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#search-bar:focus {
     outline: none;
 }
 
 #search-buttons { /* text-align on the buttons' parent element to center them horizontally */
-    position: relative;
+    position: absolute;
     text-align: center;
-    top: 24%;
+   /* to center the element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -280%);
 }
 
 #search-button, #luck-button {
